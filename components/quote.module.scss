@@ -23,6 +23,10 @@
   justify-content: center;
   align-items: center;
 
+  @include lg {
+    display: none;
+  }
+
   &box {
     font-size: 20px;
     padding: 5px;
