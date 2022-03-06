@@ -1,11 +1,75 @@
+@mixin lg {
+  @media (max-width: 886px) {
+    @content;
+  }
+}
+
+@mixin mob {
+  @media (max-width: 570px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 995px) {
+    @content;
+  }
+}
+
 .formBox {
   width: 75%;
-  background: #2c2e31;
+  // background: #2c2e31;
+  @include lg {
+    width: 100% !important;
+  }
 }
 .txt {
-  background: green;
+  font-size: 22 px;
   height: 150px;
   width: 100%;
   display: grid;
   place-items: center;
+  color: black;
+}
+.form {
+  width: 100%;
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // color: white !important;
+
+  & textarea {
+    border-color: white !important;
+    width: 650px !important;
+
+    @include lg {
+      width: 400px !important;
+    }
+  }
+  & div {
+    margin-bottom: 20px;
+    width: 650px !important;
+    @include lg {
+      width: 400px !important;
+    }
+  }
+}
+
+.input {
+  width: 650px !important;
+  height: 20px !important;
+  margin-bottom: 80px !important;
+
+  @include lg {
+    width: 400px !important;
+  }
+}
+.btn {
+  width: 650px !important;
+  background: black !important;
+
+  @include lg {
+    width: 400px !important;
+  }
 }
